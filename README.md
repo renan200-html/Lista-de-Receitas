@@ -36,30 +36,7 @@ O site foi desenvolvido para funcionar bem em:
 * Tablets
 * Celulares
 
-## ▶️ Como executar o projeto
 
-1. Baixe ou clone este repositório:
-
-```
-git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-
-2. Abra o arquivo:
-
-```
-index.html
-```
-
-3. Navegue pelo site normalmente.
-
-## 📁 Estrutura básica
-
-```
-/projeto
- ├── index.html
- ├── home.html
- └── inicio.css (opcional)
-```
 
 ## 💡 Melhorias futuras
 

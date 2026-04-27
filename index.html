@@ -1,4 +1,4 @@
-# LIsta de Receita
+# Lista de Reseitas
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Receitas do Dia a Dia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="inicio.css">
 
 </head>
 
@@ -23,10 +23,171 @@
 
         <div class="botoes">
             <a href="home.html" class="btn">Entrar</a>
-            
+
         </div>
     </section>
-   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background: #ffb6c1;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 26px;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* BOTÕES DO HERO */
+        .botoes {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #ffb6c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: #ff8fa3;
+            transform: scale(1.08);
+        }
+
+        /* INPUTS */
+        input {
+            width: 250px;
+            padding: 12px;
+            margin: 8px;
+
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #ff8fa3;
+            box-shadow: 0 0 8px rgba(255, 143, 163, 0.6);
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            width: 300px;
+
+            margin: 15px;
+            padding: 15px;
+
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        /* VÍDEO */
+        iframe {
+            width: 100%;
+            height: 180px;
+
+            border-radius: 12px;
+        }
+
+        /* CONTAINER */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 900px) {
+            .card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .card {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            iframe {
+                height: 200px;
+            }
+
+            .btn {
+                width: 90%;
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            input {
+                width: 90%;
+            }
+        }
+    </style>
 </body>
 
 </html>

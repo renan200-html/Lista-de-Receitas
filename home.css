@@ -1,138 +1,185 @@
-  body {
-            font-family: Arial;
-            margin: 0;
-            text-align: center;
-            background: #fff0f5;
-            color: #333;
-        }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+  background: #fff0f5;
+  color: #333;
+}
 
-        /* ===== TÍTULO ===== */
-        h1 {
-            background: #ffb6c1;
-            color: white;
-            padding: 20px;
-            margin: 0;
-            font-size: 28px;
-        }
+h1 {
+  background: #ffb6c1;
+  color: white;
+  padding: 20px;
+  margin: 0;
+  font-size: 28px;
+  cursor: pointer; /* Faz o mouse virar a "mãozinha" ao passar por cima */
+  transition: all 0.4s ease; /* Deixa a mudança de cor suave */
+}
 
-        /* ===== BOTÕES (links) ===== */
-        a {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 20px;
-            background: #ffb6c1;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+h1:hover {
+  background: #ff8fa3; /* Escurece um pouco o rosa do fundo */
+  color: #fff0f5; /* Muda levemente a cor do texto */
+  letter-spacing: 2px; /* Dá um leve espaçamento nas letras ao passar o mouse */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
 
-        a:hover {
-            background: #ff8fa3;
-            transform: scale(1.05);
-        }
+/* ===== NOVO: MENU LADO A LADO ===== */
+.menu-principal {
+  display: flex; /* Ativa o modo flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  flex-wrap: wrap; /* Se não couber na tela, ele pula linha (bom para celular) */
+  gap: 15px; /* Espaço entre os botões */
+  margin: 30px 10px;
+}
 
-        /* ===== INPUTS ===== */
-        input {
-            width: 250px;
-            padding: 12px;
-            margin: 8px;
-            border: 2px solid #ffb6c1;
-            border-radius: 8px;
-            outline: none;
-        }
+/* ===== ESTILO DOS BOTÕES ===== */
+a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffb6c1;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-        input:focus {
-            border-color: #ff8fa3;
-            box-shadow: 0 0 5px #ffb6c1;
-        }
+a:hover {
+  background: #ff8fa3;
+  transform: scale(1.05);
+}
 
-        /* ===== CONTAINER ===== */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
+.container-voltar {
+  margin-top: 50px;
+}
 
-        /* ===== CARD ===== */
-        .card {
-            background: white;
-            width: 300px;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
+/* Botão de voltar com cor diferente se quiser destacar */
+.btn-voltar {
+  background: #ffb6c1;
+}
 
-        /* ===== VÍDEO ===== */
-        iframe {
-            width: 100%;
-            height: 170px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
+/* Ajuste para celular */
+@media (max-width: 600px) {
+  .menu-principal {
+    flex-direction: column; /* No celular bem pequeno, volta a ficar um sobre o outro */
+    align-items: center;
+  }
 
-        /* ===== BOTÃO VOLTAR ===== */
-        .btn-voltar {
-            display: inline-block;
-            margin: 30px;
-            padding: 12px 20px;
-            background: #ffb6c1;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+  a {
+    width: 80%; /* Botões maiores no dedo no celular */
+  }
+}
+/* ===== ESTILO DA HISTÓRIA MELHORADO ===== */
+.historia-comida {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2); /* Sombra rosada leve */
+  line-height: 1.8;
+  text-align: left; /* Texto alinhado à esquerda fica mais fácil de ler histórias */
+}
 
-        .btn-voltar:hover {
-            background: #ff8fa3;
-            transform: scale(1.05);
-        }
+.historia-comida h2,
+.historia-comida h3 {
+  color: #ff8fa3;
+  text-align: center; /* Títulos continuam no centro */
+}
 
-        /* ========================= */
-        /* 📱 RESPONSIVIDADE */
-        /* ========================= */
+.historia-comida p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 20px;
+}
 
-        /* Tablet */
-        @media (max-width: 900px) {
-            .card {
-                width: 45%;
-            }
-        }
+/* Frase em destaque */
+.destaque-texto {
+  font-style: italic;
+  font-weight: bold;
+  color: #ffb6c1;
+  font-size: 20px;
+  text-align: center;
+  border-left: 5px solid #ffb6c1;
+  border-right: 5px solid #ffb6c1;
+  padding: 15px;
+  margin: 30px 0;
+  background: #fffafa;
+}
 
-        /* Celular */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 22px;
-                padding: 15px;
-            }
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+  .historia-comida {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+  .destaque-texto {
+    font-size: 18px;
+  }
+}
+/* ===== ESTILO DO RODAPÉ (FOOTER) - VERSÃO BONITA ===== */
+footer {
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: #ffb6c1; /* Rosa principal */
+  color: white;
+  border-top: 5px solid #ff8fa3; /* Uma linha um pouco mais escura para dar detalhe */
+}
 
-            .container {
-                padding: 10px;
-            }
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-            .card {
-                width: 100%;
-                margin: 5px 0;
-            }
+.copyright {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
 
-            iframe {
-                height: 200px;
-            }
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
 
-            a,
-            .btn-voltar {
-                width: 90%;
-                padding: 15px;
-                font-size: 16px;
-            }
+/* Botões das redes sociais mais modernos */
+.link-social {
+  background: white;
+  color: #ff8fa3;
+  padding: 10px 25px;
+  font-size: 15px;
+  border-radius: 50px; /* Deixa os botões bem redondinhos nas pontas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-            input {
-                width: 90%;
-            }
-        }
+.link-social:hover {
+  background: #ff4d6d;
+  color: white;
+  transform: translateY(-5px); /* Sobe um pouco mais que antes */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.agradecimento {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Ajuste para celular no rodapé */
+@media (max-width: 600px) {
+  .redes-sociais {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .link-social {
+    width: 150px;
+  }
+}

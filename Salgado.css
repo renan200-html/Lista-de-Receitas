@@ -1,0 +1,145 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+  background: #fff0f5;
+  color: #333;
+}
+
+/* ===== TÍTULO ===== */
+h1 {
+  background: #ffb6c1;
+  color: white;
+  padding: 20px;
+  margin: 0;
+  font-size: 28px;
+  cursor: pointer; /* Faz o mouse virar a "mãozinha" ao passar por cima */
+  transition: all 0.4s ease; /* Deixa a mudança de cor suave */
+}
+h1:hover {
+  background: #ff8fa3; /* Escurece um pouco o rosa do fundo */
+  color: #fff0f5; /* Muda levemente a cor do texto */
+  letter-spacing: 2px; /* Dá um leve espaçamento nas letras ao passar o mouse */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+/* ===== BOTÕES (links) ===== */
+a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #ffb6c1;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: #ff8fa3;
+  transform: scale(1.05);
+}
+
+/* ===== INPUTS ===== */
+input {
+  width: 250px;
+  padding: 12px;
+  margin: 8px;
+  border: 2px solid #ffb6c1;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #ff8fa3;
+  box-shadow: 0 0 5px #ffb6c1;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  width: 300px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* ===== VÍDEO ===== */
+iframe {
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== BOTÃO VOLTAR ===== */
+.btn-voltar {
+  display: inline-block;
+  margin: 30px;
+  padding: 12px 20px;
+  background: #ffb6c1;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-voltar:hover {
+  background: #ff8fa3;
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVIDADE */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .card {
+    width: 45%;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  a,
+  .btn-voltar {
+    width: 90%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  input {
+    width: 90%;
+  }
+}
